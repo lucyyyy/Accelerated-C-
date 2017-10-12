@@ -46,4 +46,25 @@ int main()
   `\b` backspace character
 
 ## 1 Working with strings
+### 1.1 Input
+1. a **variable** is an **object** that has name. An object, is a part of the computer's memory that has a type.(There are other objects which do not have names)
+2. `std::cout<<"Please enter your first name:` is not followed by `std::endl`, so the computer waits on the same line for input
+3. we should also #include<string> if we want to use it. When we define a type string and don't initialize it, it is initially empty.
+4. string: when we ask the library to read a **string**, it begins by discarding **whitespace** characters from the input, then read characters until it encounters another whitespace character or end-of-file.
+5. The input operation has another side effect: It causes our prompt, which ask for user's name in this case, to appear on the computer's output device. This the result of flushing the buffer.
+6. **buffer**: 
+	In general, the input-ouput library saves its output in an internal data structure called a buffer, using it to accumulate the characters to be written, and **flushes** the buffer, by doing so, it can combine several output operations into a single write.(since most systems take some amount of time to write to output device, regardless of how many characters there are to write.)
+	Three events that caused the system to flush the buffer: 1) buffer might be full 2) read from a standard input stream 3) when we explicitly say to do so.
 
+### 1.2 Framing a name
+1. we can use `+` to **concatenate** a string and a string literal---or for that matter, two strings(but not two string literals)
+2. `+` have different meanings; we say that the operator is **overloaded**
+3. **const**: saying const as part of a variable's definition promises that we are not going to change the value of the variable for the rest of its lifetime. So must initialize it then and there.
+4. **construct** the variable: By using *parentheses* is a definition, we tell the implementation to construct variables in a way that depends on the type of variable. For strings: (integer value, char value) means repeat the char value for the integer value times.
+5. **char literals**: distinct from the string literals. A charcter literal is always enclosed in single quotes, a string literal is always enclosed in double quotes.
+6. the expression `greeting.size()` is an example of calling a **member function**, size() means the number of characters in greeting
+
+### 1.3 Details
+1. variables defined inside a pair of curly braces are local variables. When the implementation reaches the },  it destroys the variables, and returns any memory they occupied to the system.
+
+## 2 Looping and counting
