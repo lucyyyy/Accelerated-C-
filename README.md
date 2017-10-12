@@ -68,3 +68,6 @@ int main()
 1. variables defined inside a pair of curly braces are local variables. When the implementation reaches the },  it destroys the variables, and returns any memory they occupied to the system.
 
 ## 2 Looping and counting
+This chapter changes the previous formated greetings in a way using loop so that we can modify the code easily to adjust the format.
+### 2.3 Writing an unknown number of rows
+
