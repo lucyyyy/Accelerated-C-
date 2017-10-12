@@ -8,6 +8,7 @@ study notes and exercises for the book 'Accelerated C++'
 - Do go to the website:  http://www.acceleratedcpp.com
 
 ## 0 Getting Started
+
 ```
 // a small C++ program
 #include <iostream>
@@ -34,3 +35,15 @@ int main()
 - The operator :: is also known as the **scope operator**, thus std::out means "the name cout that is in the (namespace) scope std"
 - Curly braces form another kind of scope.
 8. Details:
+- three entities that are not free-form:
+  string literals: may not span lines
+  #include name: must appear on a line by themselves
+  //comments: ends at the end of the current line (`/*`is free-form)
+- Types: define data structures and operations on those data structures; c++ has two kinds of types: those built in the core language, such as int; and those defined outside, such as std::ostream
+- some special string literals: 
+  `\n` newline character
+  `\t` tab character
+  `\b` backspace character
+
+## 1 Working with strings
+
